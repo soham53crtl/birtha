@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday 🎉</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff6f91;
+      --secondary: #ffc75f;
+      --bg: #fff6f9;
+      --text: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--bg), #ffffff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      width: 90%;
+      max-width: 520px;
+      padding: 2.5rem 2rem;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      background: radial-gradient(circle, var(--secondary), transparent 60%);
+      opacity: 0.25;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 1.8rem;
+    }
+
+    .name {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.6rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), #ff9671);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 8px 20px rgba(255,111,145,0.4);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(255,111,145,0.5);
+    }
+
+    .footer {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    .balloon {
+      position: absolute;
+      width: 40px;
+      height: 55px;
+      background: var(--primary);
+      border-radius: 50% 50% 50% 50%;
+      bottom: -80px;
+      animation: float 8s infinite ease-in;
+      opacity: 0.85;
+    }
+
+    .balloon::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 25px;
+      background: #aaa;
+      left: 50%;
+      top: 55px;
+    }
+
+    .b1 { left: 15%; animation-delay: 0s; }
+    .b2 { left: 45%; background:#ffc75f; animation-delay: 2s; }
+    .b3 { left: 75%; background:#845ec2; animation-delay: 4s; }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-120vh); }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.9rem; }
+      h2 { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎈 Floating balloons -->
+  <div class="balloon b1"></div>
+  <div class="balloon b2"></div>
+  <div class="balloon b3"></div>
+
+  <div class="card">
+    <div class="content">
+      <!-- 🔧 EDIT THESE VARIABLES -->
+      <h1>🎉 Happy Birthday! 🎉</h1>
+      <h2>Dear <span class="name">Your Name Here</span></h2>
+
+      <p>
+        Wishing you a day filled with happiness, smiles, and unforgettable moments.
+        May this year bring success, peace, and everything your heart hopes for.
+      </p>
+
+      <a class="btn" href="#">Sending You Love 💖</a>
+
+      <div class="footer">
+        — From <strong>Your Name</strong>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
